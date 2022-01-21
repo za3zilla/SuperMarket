@@ -10,7 +10,7 @@ namespace SuperMarket.UnitTests.Items
         public void ItemShouldHaveData()
         {
             string itemName = "can of beans";
-            decimal itemPrice = 0.65m; 
+            decimal itemPrice = 0.65m;
             Item item = new Item(itemName, itemPrice);
 
             //New item created
@@ -25,6 +25,15 @@ namespace SuperMarket.UnitTests.Items
             //Check that the item has the right price
             Assert.AreEqual(itemPrice, item.Price);
 
+        }
+
+        [TestMethod]
+        public void ItemShouldNotHaveSameId()
+        {
+            Item firstItem = new Item("can of beans", 0.65m);
+            Item secondItem = new Item("can of soda", 0.95m);
+
+            Assert.AreNotEqual(firstItem.Id, secondItem.Id);
         }
     }
 }
