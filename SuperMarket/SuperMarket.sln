@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32014.148
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperMarket", "SuperMarket\SuperMarket.csproj", "{5891BC04-C9F0-46C3-ABFA-DA6C2171DB16}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SuperMarket", "SuperMarket\SuperMarket.csproj", "{5891BC04-C9F0-46C3-ABFA-DA6C2171DB16}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperMarket.Entities", "SuperMarket.Entities\SuperMarket.Entities.csproj", "{7FBD030E-B485-4D42-BC4A-416D8C398851}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperMarket.UnitTests", "SuperMarket.UnitTests\SuperMarket.UnitTests.csproj", "{BF644EDF-7AAE-4169-B3A1-1CE0A83B357C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{5891BC04-C9F0-46C3-ABFA-DA6C2171DB16}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5891BC04-C9F0-46C3-ABFA-DA6C2171DB16}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5891BC04-C9F0-46C3-ABFA-DA6C2171DB16}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7FBD030E-B485-4D42-BC4A-416D8C398851}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7FBD030E-B485-4D42-BC4A-416D8C398851}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7FBD030E-B485-4D42-BC4A-416D8C398851}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7FBD030E-B485-4D42-BC4A-416D8C398851}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF644EDF-7AAE-4169-B3A1-1CE0A83B357C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF644EDF-7AAE-4169-B3A1-1CE0A83B357C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF644EDF-7AAE-4169-B3A1-1CE0A83B357C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF644EDF-7AAE-4169-B3A1-1CE0A83B357C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

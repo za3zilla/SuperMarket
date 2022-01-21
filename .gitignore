@@ -4,4 +4,8 @@
 
 /SuperMarket/.vs/SuperMarket/v17
 /SuperMarket/SuperMarket/obj
-/SuperMarket/SuperMarket/bin/Debug/net5.0
+/SuperMarket/SuperMarket/bin
+/SuperMarket/SuperMarket.Entities/obj
+/SuperMarket/SuperMarket.Entities/bin
+/SuperMarket/SuperMarket.UnitTests/obj
+/SuperMarket/SuperMarket.UnitTests/bin
