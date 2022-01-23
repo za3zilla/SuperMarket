@@ -2,7 +2,7 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
-/SuperMarket/.vs/SuperMarket/v17
+/SuperMarket/.vs
 /SuperMarket/SuperMarket/obj
 /SuperMarket/SuperMarket/bin
 /SuperMarket/SuperMarket.Entities/obj
