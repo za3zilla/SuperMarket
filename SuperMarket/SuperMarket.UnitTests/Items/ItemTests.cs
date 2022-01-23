@@ -7,12 +7,19 @@ namespace SuperMarket.UnitTests.Items
     [TestClass]
     public class ItemTests
     {
+        private static Item GetItem(out string itemName, out decimal itemPrice)
+        {
+            itemName = "can of beans";
+            itemPrice = 0.65m;
+            return new Item(itemName, itemPrice);
+        }
+
         [TestMethod]
         public void ItemShouldHaveData()
         {
-            string itemName = "can of beans";
-            decimal itemPrice = 0.65m;
-            Item item = new Item(itemName, itemPrice);
+            string itemName;
+            decimal itemPrice;
+            Item item = GetItem(out itemName, out itemPrice);
 
             //New item created
             Assert.IsNotNull(item);
@@ -48,6 +55,23 @@ namespace SuperMarket.UnitTests.Items
             Item secondItem = new Item("can of soda", 0.95m);
 
             Assert.AreNotEqual(firstItem.Id, secondItem.Id);
+        }
+
+        [TestMethod]
+        public void ItemDetailShouldHaveData()
+        {
+            decimal itemPrice;
+            int itemCount = 2;
+            Item item = GetItem(out _, out itemPrice);
+
+            ItemDetail itemDetail = new ItemDetail(item, itemCount);
+
+            //New itemDetail created
+            Assert.IsNotNull(itemDetail);
+
+            //Check that the item has the right cost
+            decimal expectedPrice = 2 * itemPrice;
+            Assert.AreEqual(expectedPrice, itemDetail.GetCost());
         }
     }
 }
