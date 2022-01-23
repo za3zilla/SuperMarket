@@ -4,16 +4,16 @@ using SuperMarket.Entities.Rules;
 namespace SuperMarket.UnitTests.Rules
 {
     [TestClass]
-    public class RuleTests
+    public class RuleTests : BaseTest
     {
         [TestMethod]
         public void CountRuleShouldHaveData()
         {
-            string name = "Three for a dollar";
-            int unit = 3;
-            decimal price = 1;
-
-            CountRule rule = new CountRule(name, unit, price);
+            //Create Three for a dollar rule
+            string name;
+            int unit;
+            decimal price;
+            CountRule rule = GetCountRule(out name, out unit, out price);
 
             //New rule created
             Assert.IsNotNull(rule);
@@ -48,12 +48,10 @@ namespace SuperMarket.UnitTests.Rules
         [TestMethod]
         public void WeightRuleShouldHaveData()
         {
-            string name = "1 kilo for 1.99";
-            decimal weight = 1;
-            decimal itemWeight = 0.5m;
-            decimal price = 1.99m;
-
-            WeightRule rule = new WeightRule(name, weight, itemWeight, price);
+            //Create 1 kilo for 1.99 rule
+            string name;
+            decimal weight, price;
+            WeightRule rule = GetWeightRule(out name, out weight, out price);
 
             //New rule created
             Assert.IsNotNull(rule);
@@ -91,11 +89,10 @@ namespace SuperMarket.UnitTests.Rules
         [TestMethod]
         public void FreeItemRuleShouldHaveData()
         {
-            string name = "Buy 2 get 1 free";
-            int unit = 2;
-            int freeItemCount = 1;
-
-            FreeItemRule rule = new FreeItemRule(name, unit, freeItemCount);
+            //Create Buy 2 get 1 free rule
+            string name;
+            int unit, freeItemCount;
+            FreeItemRule rule = GetFreeItemRule(out name, out unit, out freeItemCount);
 
             //New rule created
             Assert.IsNotNull(rule);

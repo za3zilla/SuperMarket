@@ -5,18 +5,12 @@ using SuperMarket.Entities.Rules;
 namespace SuperMarket.UnitTests.Items
 {
     [TestClass]
-    public class ItemTests
+    public class ItemTests : BaseTest
     {
-        private static Item GetItem(out string itemName, out decimal itemPrice)
-        {
-            itemName = "can of beans";
-            itemPrice = 0.65m;
-            return new Item(itemName, itemPrice);
-        }
-
         [TestMethod]
         public void ItemShouldHaveData()
         {
+            //Create can of beans item
             string itemName;
             decimal itemPrice;
             Item item = GetItem(out itemName, out itemPrice);
@@ -60,6 +54,7 @@ namespace SuperMarket.UnitTests.Items
         [TestMethod]
         public void ItemDetailShouldHaveData()
         {
+            //Create can of beans item
             decimal itemPrice;
             int itemCount = 2;
             Item item = GetItem(out _, out itemPrice);
